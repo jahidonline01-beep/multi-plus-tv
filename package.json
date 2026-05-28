@@ -1,0 +1,36 @@
+{
+  "name": "multi-plus-tv-premium",
+  "version": "1.1.0",
+  "description": "Multi Plus TV Premium desktop app",
+  "main": "main.js",
+  "author": "JAHID",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.multiplustv.premium",
+    "productName": "Multi Plus TV Premium",
+    "files": [
+      "index.html",
+      "main.js",
+      "logo.png",
+      "logo.ico"
+    ],
+    "win": {
+      "icon": "logo.ico",
+      "target": ["nsis", "portable"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Multi Plus TV Premium"
+    }
+  }
+}
